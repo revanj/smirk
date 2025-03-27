@@ -87,6 +87,7 @@ if __name__ == '__main__':
 
     count = 0
     start_time = time.time()
+    print("processing start")
     for image in images:        
         orig_image_height, orig_image_width, _ = image.shape
 
@@ -121,5 +122,7 @@ if __name__ == '__main__':
             current_time = start_time = time.time()
             print("processed", count, "frames in", current_time - start_time, "seconds")
             print("this is", 100/(current_time-start_time), "fps")
+
+        count += 1
 
 
