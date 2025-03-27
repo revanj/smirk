@@ -119,7 +119,7 @@ if __name__ == '__main__':
 
         outputs = smirk_encoder(cropped_image)
         if count > 0 and count % 100 == 0:
-            current_time = start_time = time.time()
+            current_time = time.time()
             print("processed", count, "frames in", current_time - start_time, "seconds")
             print("this is", 100/(current_time-start_time), "fps")
 
