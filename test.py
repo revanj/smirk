@@ -11,6 +11,7 @@ import src.utils.masking as masking_utils
 from utils.mediapipe_utils import run_mediapipe
 from datasets.base_dataset import create_mask
 import torch.nn.functional as F
+import time
 
 
 def crop_face(frame, landmarks, scale=1.0, image_size=224):
@@ -82,9 +83,7 @@ if __name__ == '__main__':
 
     # check if input is an image or a video or webcam or directory
     
-    images = video_to_images_original('assets/obama.mp4')
-    print("read", len(images), "images")
-    print("each image is", images[0])
+    images = video_to_images_original(args.input_path)
 
     count = 0
     start_time = time.time()
