@@ -122,6 +122,7 @@ if __name__ == '__main__':
             current_time = time.time()
             print("processed", count, "frames in", current_time - start_time, "seconds")
             print("this is", 100/(current_time-start_time), "fps")
+            start_time = current_time
 
         count += 1
 
