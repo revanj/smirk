@@ -82,13 +82,13 @@ if __name__ == '__main__':
 
     # check if input is an image or a video or webcam or directory
     
-    images = video_to_images_original(args.input_path)
+    images = video_to_images_original('assets/obama.mp4')
+    print("read", len(images), "images")
+    print("each image is", images[0])
 
     count = 0
     start_time = time.time()
-    for image in images:
-        # image = cv2.imread(args.input_path)
-        
+    for image in images:        
         orig_image_height, orig_image_width, _ = image.shape
 
         kpt_mediapipe = run_mediapipe(image)
