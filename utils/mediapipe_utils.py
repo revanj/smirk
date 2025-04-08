@@ -4,7 +4,7 @@ from mediapipe.tasks.python import vision
 import cv2
 import numpy as np
 
-base_options = python.BaseOptions(model_asset_path='assets/face_landmarker.task')
+base_options = python.BaseOptions(model_asset_path='thirdparty/smirk/assets/face_landmarker.task')
 options = vision.FaceLandmarkerOptions(base_options=base_options,
                                     output_face_blendshapes=True,
                                     output_facial_transformation_matrixes=True,

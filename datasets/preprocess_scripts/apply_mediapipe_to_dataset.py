@@ -103,7 +103,7 @@ def process_file(root, file_name, face_detector):
 def process_sample(args):
     root, file_name = args
     face_detector_options = vision.FaceLandmarkerOptions(
-        base_options=python.BaseOptions(model_asset_path='assets/face_landmarker.task'),
+        base_options=python.BaseOptions(model_asset_path='thirdparty/smirk/assets/face_landmarker.task'),
         output_face_blendshapes=False,
         output_facial_transformation_matrixes=False,
         num_faces=1
